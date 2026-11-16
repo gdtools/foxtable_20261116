@@ -1,0 +1,2508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{5F3FFAA4-3C60-44F2-B3D9-22E4E7928695}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Foxtable</RootNamespace>
+    <AssemblyName>Foxtable</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Foxtable.ico</ApplicationIcon>
+    <StartupObject>Foxtable.Main</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Neodynamic.WinControls.BarcodeProfessional">
+      <HintPath>..\..\Premium\Neodynamic.WinControls.BarcodeProfessional.dll</HintPath>
+    </Reference>
+    <Reference Include="Foxtable.Lib">
+      <HintPath>..\..\Premium\Foxtable.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="C1.Win.C1Input.4">
+      <HintPath>..\..\Premium\C1.Win.C1Input.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command.4">
+      <HintPath>..\..\Premium\C1.Win.C1Command.4.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.SyntaxEditor.WinForms">
+      <HintPath>..\..\Premium\ActiproSoftware.SyntaxEditor.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Text.Addons.DotNet.WinForms">
+      <HintPath>..\..\Premium\ActiproSoftware.Text.Addons.DotNet.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="ActiproSoftware.SyntaxEditor.Addons.DotNet.WinForms">
+      <HintPath>..\..\Premium\ActiproSoftware.SyntaxEditor.Addons.DotNet.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Text.WinForms">
+      <HintPath>..\..\Premium\ActiproSoftware.Text.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="C1.Win.C1FlexGrid.4">
+      <HintPath>..\..\Premium\C1.Win.C1FlexGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.Sparkline.4">
+      <HintPath>..\..\Premium\C1.Win.Sparkline.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Premium\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Pdf.4">
+      <HintPath>..\..\Premium\C1.C1Pdf.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Document.4">
+      <HintPath>..\..\Premium\C1.Win.C1Document.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.FlexViewer.4">
+      <HintPath>..\..\Premium\C1.Win.FlexViewer.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.Map.4">
+      <HintPath>..\..\Premium\C1.Win.Map.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms">
+      <HintPath>..\..\Premium\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADOX">
+      <HintPath>..\..\Premium\Interop.ADOX.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.Input.MultiSelect.4">
+      <HintPath>..\..\Premium\C1.Win.Input.MultiSelect.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1GanttView.4">
+      <HintPath>..\..\Premium\C1.Win.C1GanttView.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Gauge.4">
+      <HintPath>..\..\Premium\C1.Win.C1Gauge.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="C1.Win.4">
+      <HintPath>..\..\Premium\C1.Win.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart.4">
+      <HintPath>..\..\Premium\C1.Win.C1Chart.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSScriptControl">
+      <HintPath>..\..\Premium\Interop.MSScriptControl.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Sizer.4">
+      <HintPath>..\..\Premium\C1.Win.C1Sizer.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>..\..\Premium\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.4">
+      <HintPath>..\..\Premium\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Gauge.4.Design">
+      <HintPath>..\..\Premium\C1.Win.C1Gauge.4.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\Premium\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Zip.4">
+      <HintPath>..\..\Premium\C1.C1Zip.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>..\..\Premium\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="WXBizMsgCrypt">
+      <HintPath>..\..\Premium\WXBizMsgCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ADODB">
+      <HintPath>..\..\Premium\Interop.ADODB.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPShrNET">
+      <HintPath>..\..\Premium\DPFPShrNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPDevNET">
+      <HintPath>..\..\Premium\DPFPDevNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPEngNET">
+      <HintPath>..\..\Premium\DPFPEngNET.dll</HintPath>
+    </Reference>
+    <Reference Include="DPFPVerNET">
+      <HintPath>..\..\Premium\DPFPVerNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.JinDI_SmsComLib">
+      <HintPath>..\..\Premium\Interop.JinDI_SmsComLib.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4">
+      <HintPath>..\..\Premium\C1.Win.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Excel.4">
+      <HintPath>..\..\Premium\C1.C1Excel.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSDASC">
+      <HintPath>..\..\Premium\Interop.MSDASC.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Ribbon.4">
+      <HintPath>..\..\Premium\C1.Win.C1Ribbon.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Themes.4">
+      <HintPath>..\..\Premium\C1.Win.C1Themes.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Word.4">
+      <HintPath>..\..\Premium\C1.C1Word.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="Office2007Renderer">
+      <HintPath>..\..\Premium\Office2007Renderer.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.JRO">
+      <HintPath>..\..\Premium\Interop.JRO.dll</HintPath>
+    </Reference>
+    <Reference Include="ChnCharInfo">
+      <HintPath>..\..\Premium\ChnCharInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Shared.WinForms">
+      <HintPath>..\..\Premium\ActiproSoftware.Shared.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="TSF">
+      <HintPath>..\..\Premium\TSF.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Schedule.4">
+      <HintPath>..\..\Premium\C1.Win.C1Schedule.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="C1.Win.C1FlexGrid.ImportExport.4">
+      <HintPath>..\..\Premium\C1.Win.C1FlexGrid.ImportExport.4.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOXBuilder.cs" />
+    <Compile Include="ADOXTable.cs" />
+    <Compile Include="ADOXType.cs" />
+    <Compile Include="af.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="af.Designer.cs">
+      <DependentUpon>af.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AfterReceiveFileEventArgs.cs" />
+    <Compile Include="AfterSendFileEventArgs.cs" />
+    <Compile Include="AggregateRange.cs" />
+    <Compile Include="AggregateType.cs" />
+    <Compile Include="AIParameter.cs" />
+    <Compile Include="AITool.cs" />
+    <Compile Include="AIToolBuilder.cs" />
+    <Compile Include="AudioJs.cs" />
+    <Compile Include="b.cs" />
+    <Compile Include="BarCodeBuilder.cs" />
+    <Compile Include="BarCodeEnum.cs" />
+    <Compile Include="BarcodeProfessionalProperty.cs" />
+    <Compile Include="BarCodeProperty.cs" />
+    <Compile Include="BarDirectionEnum.cs" />
+    <Compile Include="BeforeAddFileEventArgs.cs" />
+    <Compile Include="BeforeAttachFileEvents.cs" />
+    <Compile Include="BeforeCloseProjectEventArgs.cs" />
+    <Compile Include="BeforeConnectOuterDataSourceEventArgs.cs" />
+    <Compile Include="BeforeDeleteFileEventArgs.cs" />
+    <Compile Include="BeforeGetImageEventArgs.cs" />
+    <Compile Include="BeforeLoadInnerTableEventArgs.cs" />
+    <Compile Include="BeforeLoadOuterTableEventArgs.cs" />
+    <Compile Include="BeforeOpenFileEventArgs.cs" />
+    <Compile Include="BeforeOpenProjectEventArgs.cs" />
+    <Compile Include="BeforeShowContextMenuEventArgs.cs" />
+    <Compile Include="BomTable.cs" />
+    <Compile Include="BuildEventArgs.cs" />
+    <Compile Include="BuildInDropTree.cs" />
+    <Compile Include="ButtonProperty.cs" />
+    <Compile Include="CalendarProperty.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="CancelEventArgs.cs" />
+    <Compile Include="CellChart.cs" />
+    <Compile Include="CellClickEventArgs.cs" />
+    <Compile Include="CellRange.cs" />
+    <Compile Include="CellRangeChangeEventArgs.cs" />
+    <Compile Include="CellStyle.cs" />
+    <Compile Include="CellStyleProperty.cs" />
+    <Compile Include="ChangeEditEventArgs.cs" />
+    <Compile Include="ChartBuilder.cs" />
+    <Compile Include="ChartEventArgs.cs" />
+    <Compile Include="ChartHistogram.cs" />
+    <Compile Include="ChartMouseEventArgs.cs" />
+    <Compile Include="ChartProperty.cs" />
+    <Compile Include="ChartToolTipEventArgs.cs" />
+    <Compile Include="ChartTypeEnum.cs" />
+    <Compile Include="CheckBoxProperty.cs" />
+    <Compile Include="CheckedComboBoxProperty.cs" />
+    <Compile Include="CheckedListBoxProperty.cs" />
+    <Compile Include="ChildrenCollection.cs" />
+    <Compile Include="ChinesFunctions.cs" />
+    <Compile Include="Client_BuddyLoginEventArgs.cs" />
+    <Compile Include="Client_BuddyLogoutEventArgs.cs" />
+    <Compile Include="Client_ChangeUserPasswordEventArgs.cs" />
+    <Compile Include="Client_LogoutEventArgs.cs" />
+    <Compile Include="Client_MessageEventargs.cs" />
+    <Compile Include="Client_UserEventArgs.cs" />
+    <Compile Include="ClipBoardJs.cs" />
+    <Compile Include="Col.cs" />
+    <Compile Include="ColCollection.cs" />
+    <Compile Include="ColorDialogA.cs" />
+    <Compile Include="ColorDialogJs.cs" />
+    <Compile Include="ColorLabelProperty.cs" />
+    <Compile Include="ColorPickerProperty.cs" />
+    <Compile Include="ColumnDataTypeEnum.cs" />
+    <Compile Include="ColumnLayoutSetting.cs" />
+    <Compile Include="ComboboxProperty.cs" />
+    <Compile Include="CompassEnum.cs" />
+    <Compile Include="ConfigFunctions.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="ConnectionCollection.cs" />
+    <Compile Include="ConnectModemResultEventArgs.cs" />
+    <Compile Include="ContentLoadingEventArgs.cs" />
+    <Compile Include="ContextCommand.cs" />
+    <Compile Include="ContextCommandEventArgs.cs" />
+    <Compile Include="ContextCommandMenu.cs" />
+    <Compile Include="ContextCommandMenuEventArgs.cs" />
+    <Compile Include="ContextMenu.cs" />
+    <Compile Include="ContextMenuCollection.cs" />
+    <Compile Include="ContextMenuEventArgs.cs" />
+    <Compile Include="ContextMenuRequestedEventArgs.cs" />
+    <Compile Include="ControlCollection.cs" />
+    <Compile Include="ControlEventArgs.cs" />
+    <Compile Include="ControlHolder.cs" />
+    <Compile Include="ControlKeyEventArgs.cs" />
+    <Compile Include="ControlKeyPressEventArgs.cs" />
+    <Compile Include="ControlMouseEventArgs.cs" />
+    <Compile Include="ControlPropertyBase.cs" />
+    <Compile Include="ControlTypeEnum.cs" />
+    <Compile Include="CrossExpressionGroup.cs" />
+    <Compile Include="CrossExpressionGroupCollections.cs" />
+    <Compile Include="CrossGroupCollection.cs" />
+    <Compile Include="CrossGroupOn.cs" />
+    <Compile Include="CrossTableBuilder.cs" />
+    <Compile Include="CrossTableProperty.cs" />
+    <Compile Include="CrossTotalCollection.cs" />
+    <Compile Include="CrossTotalOn.cs" />
+    <Compile Include="cssClassList.cs" />
+    <Compile Include="CSSStyle.cs" />
+    <Compile Include="CursorEnum.cs" />
+    <Compile Include="CustomCheckBox.cs" />
+    <Compile Include="CustomCheckedListBox.cs" />
+    <Compile Include="CustomColorLabel.cs" />
+    <Compile Include="CustomDockingTabPageProperty.cs" />
+    <Compile Include="CustomListBox.cs" />
+    <Compile Include="CustomMarkShape.cs" />
+    <Compile Include="CustomMenuClickEventArgs.cs" />
+    <Compile Include="CustomNavBarPanelProperty.cs" />
+    <Compile Include="CustomPictureBox.cs" />
+    <Compile Include="CustomTileSource.cs" />
+    <Compile Include="CustomTreeNodeProperty.cs" />
+    <Compile Include="d0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="d0.Designer.cs">
+      <DependentUpon>d0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataCol.cs" />
+    <Compile Include="DataColBuilder.cs" />
+    <Compile Include="DataColCollection.cs" />
+    <Compile Include="DataColEventArgs.cs" />
+    <Compile Include="DataColumnProperty.cs" />
+    <Compile Include="DataMapJs.cs" />
+    <Compile Include="DataReceivedEventArgs.cs" />
+    <Compile Include="DataRelationCollection.cs" />
+    <Compile Include="DataRow.cs" />
+    <Compile Include="DataRowCollection.cs" />
+    <Compile Include="DataRowEventArgs.cs" />
+    <Compile Include="DataServerTypeEnum.cs" />
+    <Compile Include="DataTable.cs" />
+    <Compile Include="DataTableBuilder.cs" />
+    <Compile Include="DataTableCollection.cs" />
+    <Compile Include="DataTableProperty.cs" />
+    <Compile Include="DataToTable.cs" />
+    <Compile Include="DataTypePair.cs" />
+    <Compile Include="DateTimePickerProperty.cs" />
+    <Compile Include="DetailEventArgs.cs" />
+    <Compile Include="di.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="di.Designer.cs">
+      <DependentUpon>di.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayTypeEnum.cs" />
+    <Compile Include="DockSetting.cs" />
+    <Compile Include="DOMContentLoadedEventArgs.cs" />
+    <Compile Include="DotfuscatorAttribute.cs" />
+    <Compile Include="DownloadStartingEventArgs.cs" />
+    <Compile Include="DownloadStateChangedEventArgs.cs" />
+    <Compile Include="DragColumnEventArgs.cs" />
+    <Compile Include="DrawCellEventArgs.cs" />
+    <Compile Include="DrawListViewCellEventArgs.cs" />
+    <Compile Include="DrawRowEventArgs.cs" />
+    <Compile Include="DropDownBoxProperty.cs" />
+    <Compile Include="DropDownClosedEventArgs.cs" />
+    <Compile Include="DropListViewRowEventArgs.cs" />
+    <Compile Include="DropTreeBuilder.cs" />
+    <Compile Include="du.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="du.Designer.cs">
+      <DependentUpon>du.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DyncMemberAccessor.cs" />
+    <Compile Include="ef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ef.Designer.cs">
+      <DependentUpon>ef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ev.Designer.cs">
+      <DependentUpon>ev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exporter.cs" />
+    <Compile Include="ExpressionGroup.cs" />
+    <Compile Include="ExpressionTotal.cs" />
+    <Compile Include="f4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="f4.Designer.cs">
+      <DependentUpon>f4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileInfo.cs" />
+    <Compile Include="FileManager.cs" />
+    <Compile Include="FileManagerProperty.cs" />
+    <Compile Include="FileSystemWatcher.cs" />
+    <Compile Include="FileWatchEventArgs.cs" />
+    <Compile Include="Filler.cs" />
+    <Compile Include="FilterEventArgs.cs" />
+    <Compile Include="FilterRowEventArgs.cs" />
+    <Compile Include="FingerCaptureEventArgs.cs" />
+    <Compile Include="FitTypeEnum.cs" />
+    <Compile Include="FolderBrowserDialogA.cs" />
+    <Compile Include="FolderBrowserDialogForjs.cs" />
+    <Compile Include="FontDialgA.cs" />
+    <Compile Include="FontDialogJs.cs" />
+    <Compile Include="FontPickerProperty.cs" />
+    <Compile Include="FormattingEventArgs.cs" />
+    <Compile Include="FormCollection.cs" />
+    <Compile Include="FormEventArgs.cs" />
+    <Compile Include="FormMenuItemProperty.cs" />
+    <Compile Include="FormMenuProperty.cs" />
+    <Compile Include="FormPanel.cs" />
+    <Compile Include="FormProperty.cs" />
+    <Compile Include="FormStyleEnum.cs" />
+    <Compile Include="FoxFinger.cs" />
+    <Compile Include="FoxSMSControl.cs" />
+    <Compile Include="FTPBeforeListDetailsEventArgs.cs" />
+    <Compile Include="FTPClient.cs" />
+    <Compile Include="FTPDeleteEventargs.cs" />
+    <Compile Include="FTPDownloadEventArgs.cs" />
+    <Compile Include="FTPFolderEventArgs.cs" />
+    <Compile Include="FTPRenameEventArgs.cs" />
+    <Compile Include="FTPUploadEventArgs.cs" />
+    <Compile Include="fxDataRelationProperty.cs" />
+    <Compile Include="fxDataSource.cs" />
+    <Compile Include="fxDataSource2.cs" />
+    <Compile Include="g1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="g1.Designer.cs">
+      <DependentUpon>g1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="g2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="g2.Designer.cs">
+      <DependentUpon>g2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GannttStripItemClikEventArgs.cs" />
+    <Compile Include="GanttPaintDayEventArgs.cs" />
+    <Compile Include="GanttTaskBarClickEventArgs.cs" />
+    <Compile Include="GanttTaskBarTooltipEventArgs.cs" />
+    <Compile Include="GanttTaskEventArgs.cs" />
+    <Compile Include="GanttTasksEventArgs.cs" />
+    <Compile Include="GanttView.cs" />
+    <Compile Include="GanttViewProperty.cs" />
+    <Compile Include="GaugeFormatLabelEventArgs.cs" />
+    <Compile Include="GaugeItemEventArgs.cs" />
+    <Compile Include="GaugeItemMouseEventArgs.cs" />
+    <Compile Include="GaugePointerDragEventArgs.cs" />
+    <Compile Include="GaugePointerValueChangedEventArgs.cs" />
+    <Compile Include="GaugesProperty.cs" />
+    <Compile Include="GeoMap.cs" />
+    <Compile Include="GetMapTileEventArgs.cs" />
+    <Compile Include="GetVirtualItemsEventArgs.cs" />
+    <Compile Include="gg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gg.Designer.cs">
+      <DependentUpon>gg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariableChangedEventArgs.cs" />
+    <Compile Include="GroupBoxProperty.cs" />
+    <Compile Include="GroupCollection.cs" />
+    <Compile Include="GroupFooterEventArgs.cs" />
+    <Compile Include="GroupHeaderEventArgs.cs" />
+    <Compile Include="GroupOn.cs" />
+    <Compile Include="GroupTableBuilder.cs" />
+    <Compile Include="GroupTableProperty.cs" />
+    <Compile Include="GroupTreeSetting.cs" />
+    <Compile Include="gv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gv.Designer.cs">
+      <DependentUpon>gv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="h0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="h0.Designer.cs">
+      <DependentUpon>h0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HElement.cs" />
+    <Compile Include="HistogramTypeEnum.cs" />
+    <Compile Include="HStorage.cs" />
+    <Compile Include="HttpClient.cs" />
+    <Compile Include="HttpDictionary.cs" />
+    <Compile Include="HttpFilleCollection.cs" />
+    <Compile Include="HttpFunctions.cs" />
+    <Compile Include="HttpListenter.cs" />
+    <Compile Include="ImageMap.cs" />
+    <Compile Include="ImageSizeMode.cs" />
+    <Compile Include="IMBuddy.cs" />
+    <Compile Include="IMBuddyCollections.cs" />
+    <Compile Include="IMClient.cs" />
+    <Compile Include="IMClientCollections.cs" />
+    <Compile Include="IMFontProperty.cs" />
+    <Compile Include="Importer.cs" />
+    <Compile Include="IMServer.cs" />
+    <Compile Include="IMServerCollections.cs" />
+    <Compile Include="IMUser.cs" />
+    <Compile Include="IMUserCollections.cs" />
+    <Compile Include="InitializationCompletedEventArgs.cs" />
+    <Compile Include="InlineGroupTableBuilder.cs" />
+    <Compile Include="InlineMRPBuilder.cs" />
+    <Compile Include="InlineTreeSetting.cs" />
+    <Compile Include="ItemCheckEventArgs.cs" />
+    <Compile Include="j8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="j8.Designer.cs">
+      <DependentUpon>j8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jk.Designer.cs">
+      <DependentUpon>jk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JoinTableProperty.cs" />
+    <Compile Include="jr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jr.Designer.cs">
+      <DependentUpon>jr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="k2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="k2.Designer.cs">
+      <DependentUpon>k2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyEditEventArgs.cs" />
+    <Compile Include="KeyEventArgs.cs" />
+    <Compile Include="KeyPressEditEventArgs.cs" />
+    <Compile Include="ky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ky.Designer.cs">
+      <DependentUpon>ky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelCompassEnum.cs" />
+    <Compile Include="LabelProperty.cs" />
+    <Compile Include="LayersGroupTableBuilder.cs" />
+    <Compile Include="LayersMRPBuilder.cs" />
+    <Compile Include="LayerTreeSetting.cs" />
+    <Compile Include="LinePatternEnum.cs" />
+    <Compile Include="LineProperty.cs" />
+    <Compile Include="ListBoxProperty.cs" />
+    <Compile Include="ListItemFormatEventArgs.cs" />
+    <Compile Include="ListViewColumnCollections.cs" />
+    <Compile Include="ListViewDrawCellEventArgs.cs" />
+    <Compile Include="ListViewEditEventArgs.cs" />
+    <Compile Include="ListViewGroupCollections.cs" />
+    <Compile Include="ListViewImageManger.cs" />
+    <Compile Include="ListViewProperty.cs" />
+    <Compile Include="ListViewRowCollections.cs" />
+    <Compile Include="ListViewRowEventArgs.cs" />
+    <Compile Include="LLMCaller.cs" />
+    <Compile Include="LoadEventArgs.cs" />
+    <Compile Include="LookAndFeelProperty.cs" />
+    <Compile Include="lz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lz.Designer.cs">
+      <DependentUpon>lz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="MaintableChangingEventArgs.cs" />
+    <Compile Include="MapProperty.cs" />
+    <Compile Include="MarkImageShape.cs" />
+    <Compile Include="MarkShapeEnum.cs" />
+    <Compile Include="MarkTextShape.cs" />
+    <Compile Include="Merger.cs" />
+    <Compile Include="MessageBoxA.cs" />
+    <Compile Include="MessageBoxForJs.cs" />
+    <Compile Include="mf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mf.Designer.cs">
+      <DependentUpon>mf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileCard.cs" />
+    <Compile Include="MobileEmail.cs" />
+    <Compile Include="MobilePhone.cs" />
+    <Compile Include="MobileSMS.cs" />
+    <Compile Include="MobileText.cs" />
+    <Compile Include="MobileURL.cs" />
+    <Compile Include="MouseHoverCellEventArgs.cs" />
+    <Compile Include="MoveRowEventArgs.cs" />
+    <Compile Include="MRPExtendTables.cs" />
+    <Compile Include="mrpPlan.cs" />
+    <Compile Include="MRPTableCols.cs" />
+    <Compile Include="MultiDataMap.cs" />
+    <Compile Include="MyPortCollections.cs" />
+    <Compile Include="My\a.cs" />
+    <Compile Include="My\b.cs" />
+    <Compile Include="My\c.cs" />
+    <Compile Include="My\d.cs" />
+    <Compile Include="My\MySettings.cs" />
+    <Compile Include="My\MySettings.Designer.cs">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My\Resources\a.cs" />
+    <Compile Include="NavBarProperty.cs" />
+    <Compile Include="NavigationCompletedEventArgs.cs" />
+    <Compile Include="NavigationStartingEventArgs.cs" />
+    <Compile Include="NavPageCollection.cs" />
+    <Compile Include="NetworkAvailabilityEventArgs.cs" />
+    <Compile Include="NewMessageEventArgs.cs" />
+    <Compile Include="NewWindowRequestedEventArgs.cs" />
+    <Compile Include="NumericComboBoxProperty.cs" />
+    <Compile Include="O.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O00.2.cs" />
+    <Compile Include="o00.cs" />
+    <Compile Include="o0000O.cs" />
+    <Compile Include="O000O.cs" />
+    <Compile Include="o000OOOO.cs" />
+    <Compile Include="o000O_o.cs" />
+    <Compile Include="O00o.cs" />
+    <Compile Include="O00Oo00ooO0_.cs" />
+    <Compile Include="O00OOO0o_00o.cs" />
+    <Compile Include="O00oOo0O_00_O.cs" />
+    <Compile Include="o00OOoo.cs" />
+    <Compile Include="O00OOOo_O0_O.cs" />
+    <Compile Include="O00_.cs" />
+    <Compile Include="o00_0__O.cs" />
+    <Compile Include="o00_o00.2.cs" />
+    <Compile Include="O00_O00.cs" />
+    <Compile Include="O00_Oooo0oo00.cs" />
+    <Compile Include="o00__0oo0.cs" />
+    <Compile Include="o0o.2.cs" />
+    <Compile Include="O0O.3.cs" />
+    <Compile Include="O0o.4.cs" />
+    <Compile Include="o0O.cs" />
+    <Compile Include="O0o0.cs" />
+    <Compile Include="O0O00.cs" />
+    <Compile Include="O0o000.cs" />
+    <Compile Include="o0o0o00.cs" />
+    <Compile Include="o0o0OO.cs" />
+    <Compile Include="O0O0oOO00_0OO.cs" />
+    <Compile Include="o0O0OOoOO.cs" />
+    <Compile Include="O0o0\00\$UNNAMED_TYPE$.cs" />
+    <Compile Include="o0o0_oo00Oo.cs" />
+    <Compile Include="O0Oo.cs" />
+    <Compile Include="O0OO000oo0O.cs" />
+    <Compile Include="O0oo000oO0oo_.cs" />
+    <Compile Include="O0oO0o0o.cs" />
+    <Compile Include="o0Oo0OO.cs" />
+    <Compile Include="O0oOo0_0.cs" />
+    <Compile Include="o0Ooo0_O_.cs" />
+    <Compile Include="O0OooO0_0O.cs" />
+    <Compile Include="o0OoOOoOOo0.cs" />
+    <Compile Include="O0oOO_.cs" />
+    <Compile Include="o0ooo_0_00oO.cs" />
+    <Compile Include="O0oO_0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O0oO_0.Designer.cs">
+      <DependentUpon>O0oO_0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O0oo_0O.cs" />
+    <Compile Include="O0OO_oo0o.cs" />
+    <Compile Include="o0OO__.cs" />
+    <Compile Include="o0o_.cs" />
+    <Compile Include="O0o_00oO__0_.cs" />
+    <Compile Include="O0O_O0.cs" />
+    <Compile Include="o0o_Oo_o.cs" />
+    <Compile Include="o0O_O__o000.cs" />
+    <Compile Include="O0O__.cs" />
+    <Compile Include="O0o__o0_o0.cs" />
+    <Compile Include="O0o__oo0O.cs" />
+    <Compile Include="o0O__ooOO00.cs" />
+    <Compile Include="o0o。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o0o。.Designer.cs">
+      <DependentUpon>o0o。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o0_.2.cs" />
+    <Compile Include="O0_.cs" />
+    <Compile Include="O0_000oo.cs" />
+    <Compile Include="o0_00Oo0o.cs" />
+    <Compile Include="O0_00_oo0oO_.cs" />
+    <Compile Include="o0_0oo00_o.cs" />
+    <Compile Include="O0_0oO__oo.cs" />
+    <Compile Include="O0_0_0O0___O.cs" />
+    <Compile Include="O0_0_0_0_.cs" />
+    <Compile Include="O0_0_0_Oo_o.cs" />
+    <Compile Include="o0_O.cs" />
+    <Compile Include="o0_OO0.cs" />
+    <Compile Include="O0_oOoo.cs" />
+    <Compile Include="O0_OoOoO.cs" />
+    <Compile Include="O0_OoO_O.cs" />
+    <Compile Include="O0_O_0O.cs" />
+    <Compile Include="O0_O_0__.cs" />
+    <Compile Include="o0_O_O0O__.cs" />
+    <Compile Include="o0_o_o_0.cs" />
+    <Compile Include="O0__000O.cs" />
+    <Compile Include="O0__00O__O0O.cs" />
+    <Compile Include="o0__oo0OOo.cs" />
+    <Compile Include="O0___o0_.cs" />
+    <Compile Include="o0___oO.cs" />
+    <Compile Include="o0　　　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o0　　　　。。.Designer.cs">
+      <DependentUpon>o0　　　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o0。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o0。.Designer.cs">
+      <DependentUpon>o0。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oO0.2.cs" />
+    <Compile Include="OO0.3.cs" />
+    <Compile Include="oo0.4.cs" />
+    <Compile Include="Oo0.cs" />
+    <Compile Include="Oo00.2.cs" />
+    <Compile Include="oo00.cs" />
+    <Compile Include="oo0000o0oo.cs" />
+    <Compile Include="oO00O0oO0o000.cs" />
+    <Compile Include="oo00o_.cs" />
+    <Compile Include="Oo0O.cs" />
+    <Compile Include="oo0O0oO_OOOo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo0O0oO_OOOo.Designer.cs">
+      <DependentUpon>oo0O0oO_OOOo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oo0o0o_0_.cs" />
+    <Compile Include="oO0o0O_OO.cs" />
+    <Compile Include="oo0o0O_oO_0_o.cs" />
+    <Compile Include="oo0O0o___O.cs" />
+    <Compile Include="oO0o0_0oO0_oO.cs" />
+    <Compile Include="oO0oo.cs" />
+    <Compile Include="Oo0ooO0o_.cs" />
+    <Compile Include="oO0OOo0o__.cs" />
+    <Compile Include="oO0oooo.cs" />
+    <Compile Include="oo0OOO_0__.cs" />
+    <Compile Include="Oo0OO_oo.cs" />
+    <Compile Include="Oo0oo_O_O00__.cs" />
+    <Compile Include="oO0O_O.cs" />
+    <Compile Include="Oo0O_O0o000.cs" />
+    <Compile Include="oO0O_oO_0O_.cs" />
+    <Compile Include="OO0o_o_Oo__o.cs" />
+    <Compile Include="Oo0O__.2.cs" />
+    <Compile Include="OO0o__.cs" />
+    <Compile Include="oo0O__O0.cs" />
+    <Compile Include="oO0_.cs" />
+    <Compile Include="Oo0_0o0_OoO0O.cs" />
+    <Compile Include="oo0_0Oo.cs" />
+    <Compile Include="oo0_o0o_0o__.cs" />
+    <Compile Include="OO0_O_0O.cs" />
+    <Compile Include="OO0_o_oOo0.cs" />
+    <Compile Include="Oo0__Oo.cs" />
+    <Compile Include="Oo0__O__O_0__.cs" />
+    <Compile Include="oO0。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oO0。.Designer.cs">
+      <DependentUpon>oO0。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OOO.2.cs" />
+    <Compile Include="oOO.3.cs" />
+    <Compile Include="Ooo.4.cs" />
+    <Compile Include="OoO.5.cs" />
+    <Compile Include="ooO.6.cs" />
+    <Compile Include="ooo.cs" />
+    <Compile Include="ooo0.2.cs" />
+    <Compile Include="OOO0.cs" />
+    <Compile Include="ooo00oO.cs" />
+    <Compile Include="OoO00OooO_.cs" />
+    <Compile Include="OOo00o_0o0_.cs" />
+    <Compile Include="ooO0O.2.cs" />
+    <Compile Include="OoO0o.3.cs" />
+    <Compile Include="OOO0o.4.cs" />
+    <Compile Include="ooo0o.cs" />
+    <Compile Include="OOO0O0.cs" />
+    <Compile Include="OoO0o0oo__Oo.cs" />
+    <Compile Include="ooO0o0_oO0_0.cs" />
+    <Compile Include="oOo0o0__0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oOo0o0__0.Designer.cs">
+      <DependentUpon>oOo0o0__0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oOO0oO000_0_0.cs" />
+    <Compile Include="oOO0ooO0__o00.cs" />
+    <Compile Include="OOO0oO_.cs" />
+    <Compile Include="oOO0oo_o0.cs" />
+    <Compile Include="OOO0o__OoOO.cs" />
+    <Compile Include="ooO0O__o_o_O_.cs" />
+    <Compile Include="OOO0_.cs" />
+    <Compile Include="OOO0_00O.cs" />
+    <Compile Include="oOo0_o0Oo_00.cs" />
+    <Compile Include="oOO0_Oo0oO.cs" />
+    <Compile Include="Ooo0__.cs" />
+    <Compile Include="ooO0__O0_O.cs" />
+    <Compile Include="ooO0__OO.cs" />
+    <Compile Include="Ooo0___.cs" />
+    <Compile Include="OoO0___o.cs" />
+    <Compile Include="OOOO.2.cs" />
+    <Compile Include="OOoO.3.cs" />
+    <Compile Include="Oooo.cs" />
+    <Compile Include="OooO0.cs" />
+    <Compile Include="OooO00O.cs" />
+    <Compile Include="OoOo0O.cs" />
+    <Compile Include="oooO0o000O.cs" />
+    <Compile Include="oOOO0oo0_oO_o.cs" />
+    <Compile Include="OoOO0ooo.cs" />
+    <Compile Include="OoOO0Oo_oo0oO.cs" />
+    <Compile Include="ooOOO.2.cs" />
+    <Compile Include="ooOoO.cs" />
+    <Compile Include="OOOoo0.cs" />
+    <Compile Include="OoOoo00.cs" />
+    <Compile Include="oOOOo0oOOOO_.cs" />
+    <Compile Include="OooOo0___oO.cs" />
+    <Compile Include="OoOoOO0O_O_o.cs" />
+    <Compile Include="oooOooo.cs" />
+    <Compile Include="oOOooooO0o00.cs" />
+    <Compile Include="OooOOO_0_O.cs" />
+    <Compile Include="OOOooo_o.cs" />
+    <Compile Include="OOoOO_00O00.cs" />
+    <Compile Include="oooOo_0oo.cs" />
+    <Compile Include="oOOoo_0_0o_.cs" />
+    <Compile Include="oOOOO_Oo_.cs" />
+    <Compile Include="Oooo_0_o_0_.cs" />
+    <Compile Include="OoOO___oo.cs" />
+    <Compile Include="oOo_.2.cs" />
+    <Compile Include="OoO_.cs" />
+    <Compile Include="oOo_00o0o00_0.cs" />
+    <Compile Include="ooo_0o.2.cs" />
+    <Compile Include="ooO_0O.cs" />
+    <Compile Include="ooo_0O0.cs" />
+    <Compile Include="ooo_0O0o00.cs" />
+    <Compile Include="ooo_0_.cs" />
+    <Compile Include="Ooo_O.2.cs" />
+    <Compile Include="OOo_o.cs" />
+    <Compile Include="OoO_O00.cs" />
+    <Compile Include="OoO_O0_OO0.cs" />
+    <Compile Include="OoO_oO.cs" />
+    <Compile Include="OoO_OO0o_0o.cs" />
+    <Compile Include="oOO_O_.cs" />
+    <Compile Include="oOo_O_0O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oOo_O_0O.Designer.cs">
+      <DependentUpon>oOo_O_0O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oOO_O__.cs" />
+    <Compile Include="OOO__0oo_oo.cs" />
+    <Compile Include="OOo__O.cs" />
+    <Compile Include="OOO__oooOOo.cs" />
+    <Compile Include="oOo__OO_.cs" />
+    <Compile Include="oOo___.cs" />
+    <Compile Include="Oo_.2.cs" />
+    <Compile Include="OO_.3.cs" />
+    <Compile Include="oO_.4.cs" />
+    <Compile Include="oo_.cs" />
+    <Compile Include="oO_0.2.cs" />
+    <Compile Include="Oo_0.cs" />
+    <Compile Include="OO_00oOO.cs" />
+    <Compile Include="oO_0OoO.cs" />
+    <Compile Include="Oo_0o_o.cs" />
+    <Compile Include="OO_0o_O_O.cs" />
+    <Compile Include="Oo_O0o0_.cs" />
+    <Compile Include="Oo_o0ooo.cs" />
+    <Compile Include="oO_oO000oo.cs" />
+    <Compile Include="OO_oO00o.cs" />
+    <Compile Include="oO_oo0Oo.cs" />
+    <Compile Include="oo_Oo0O_O.cs" />
+    <Compile Include="OO_oo0_0oo00.cs" />
+    <Compile Include="OO_OoOOO0oO.cs" />
+    <Compile Include="oo_OOOOooO.cs" />
+    <Compile Include="Oo_oO_00_o0.cs" />
+    <Compile Include="oO_OO_o0_.cs" />
+    <Compile Include="oO_o_0_o_O_o.cs" />
+    <Compile Include="OO_O__0oo.cs" />
+    <Compile Include="oo__.cs" />
+    <Compile Include="OO__oo_0ooo0_.cs" />
+    <Compile Include="oO__oO_0_O.cs" />
+    <Compile Include="oo__O__O_OoO.cs" />
+    <Compile Include="OO___.cs" />
+    <Compile Include="OO___OO0O_0.cs" />
+    <Compile Include="oo___ooo.cs" />
+    <Compile Include="OO___O_.cs" />
+    <Compile Include="OO___O_oOOO.cs" />
+    <Compile Include="OO　.Designer.cs">
+      <DependentUpon>OO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oo　　0。　o。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo　　0。　o。.Designer.cs">
+      <DependentUpon>oo　　0。　o。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oo　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo　　　。.Designer.cs">
+      <DependentUpon>oo　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oo　　。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oo　　。　。。.Designer.cs">
+      <DependentUpon>Oo　　。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oo　。_　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo　。_　　　。　　.Designer.cs">
+      <DependentUpon>oo　。_　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oO　。。　O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oO　。。　O　.Designer.cs">
+      <DependentUpon>oO　。。　O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oo。　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo。　。　。.Designer.cs">
+      <DependentUpon>oo。　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenFileDialogA.cs" />
+    <Compile Include="OpenFileDialogForjs.cs" />
+    <Compile Include="OpenQQMenuEventArgs.cs" />
+    <Compile Include="OuterTableBuilder.cs" />
+    <Compile Include="Output.cs" />
+    <Compile Include="OwerDrawMarkEventArgs.cs" />
+    <Compile Include="o_.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_.3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_0.2.cs" />
+    <Compile Include="o_0.cs" />
+    <Compile Include="O_000O.cs" />
+    <Compile Include="o_00OOooo__0_.cs" />
+    <Compile Include="O_0o.cs" />
+    <Compile Include="O_0OO.cs" />
+    <Compile Include="O_0Oo0o_0.cs" />
+    <Compile Include="o_0OO0_.cs" />
+    <Compile Include="o_0OOo0o_0O_.cs" />
+    <Compile Include="O_0oOoOo.2.cs" />
+    <Compile Include="O_0OOOoO.cs" />
+    <Compile Include="o_0oOOOOO__.cs" />
+    <Compile Include="o_0oooo_OO.cs" />
+    <Compile Include="O_0oOo_OO.cs" />
+    <Compile Include="o_0oo_OOO_0o_.cs" />
+    <Compile Include="O_0O_.cs" />
+    <Compile Include="O_0o_0o_o0O_.cs" />
+    <Compile Include="O_0_Oo.cs" />
+    <Compile Include="O_0__O_o_O.cs" />
+    <Compile Include="o_o.2.cs" />
+    <Compile Include="O_O.3.cs" />
+    <Compile Include="O_o.cs" />
+    <Compile Include="o_o0.2.cs" />
+    <Compile Include="o_O0.cs" />
+    <Compile Include="O_o00o_.cs" />
+    <Compile Include="O_O0OO.cs" />
+    <Compile Include="o_o0ooOooO.cs" />
+    <Compile Include="o_O0oO_0.cs" />
+    <Compile Include="o_o0O_Ooo__O.cs" />
+    <Compile Include="o_o0_.cs" />
+    <Compile Include="o_O0_0O0.cs" />
+    <Compile Include="O_o0_0_o0.cs" />
+    <Compile Include="o_oo.2.cs" />
+    <Compile Include="O_oo.3.cs" />
+    <Compile Include="o_oO.cs" />
+    <Compile Include="o_oo0.cs" />
+    <Compile Include="o_OO00o.cs" />
+    <Compile Include="O_Oo00Oo000O0.cs" />
+    <Compile Include="o_oo0_0_Oo0O_.cs" />
+    <Compile Include="O_OOO.2.cs" />
+    <Compile Include="o_OOO.cs" />
+    <Compile Include="O_ooO0.cs" />
+    <Compile Include="o_oOOOoo_O_O.cs" />
+    <Compile Include="O_oOooO_O.cs" />
+    <Compile Include="o_OOO_o0_.cs" />
+    <Compile Include="o_Oo_o0O.cs" />
+    <Compile Include="o_OO_oOOO0o.cs" />
+    <Compile Include="o_OO_OOO_.cs" />
+    <Compile Include="O_oO__o0.cs" />
+    <Compile Include="O_O_.cs" />
+    <Compile Include="O_O_00.cs" />
+    <Compile Include="O_o_0o.cs" />
+    <Compile Include="o_o_0OO.cs" />
+    <Compile Include="o_o_O00_.cs" />
+    <Compile Include="O_o_o0O.cs" />
+    <Compile Include="o_o_O0OO_0__.cs" />
+    <Compile Include="o_O_O0O__.cs" />
+    <Compile Include="O_O_O0_O.cs" />
+    <Compile Include="O_O_OO.cs" />
+    <Compile Include="o_o_Oo0__o_0.cs" />
+    <Compile Include="o_o_oOo__.cs" />
+    <Compile Include="O_O_o_oO0.cs" />
+    <Compile Include="o_O_o_oOoo__.cs" />
+    <Compile Include="O_o__00Ooo.cs" />
+    <Compile Include="O__.2.cs" />
+    <Compile Include="o__.cs" />
+    <Compile Include="o__000oO.cs" />
+    <Compile Include="O__000__Oo0.cs" />
+    <Compile Include="o__0OoO_.cs" />
+    <Compile Include="O__o.2.cs" />
+    <Compile Include="o__o.cs" />
+    <Compile Include="O__o00.cs" />
+    <Compile Include="o__OO.cs" />
+    <Compile Include="o__oOOo00oo0_.cs" />
+    <Compile Include="O__oO_o0_o_o.cs" />
+    <Compile Include="o__o_O0_.cs" />
+    <Compile Include="o__o_OO_o_.cs" />
+    <Compile Include="o__o_O_o0o0__.cs" />
+    <Compile Include="O___O_.cs" />
+    <Compile Include="o___o_O__.cs" />
+    <Compile Include="O_　.Designer.cs">
+      <DependentUpon>O_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O_　0_。O。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_　0_。O。。　　.Designer.cs">
+      <DependentUpon>O_　0_。O。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O_　　.Designer.cs">
+      <DependentUpon>O_.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o_　　　.Designer.cs">
+      <DependentUpon>o_.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O_。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_。　。　.Designer.cs">
+      <DependentUpon>O_。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o_。。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o_。。　　。.Designer.cs">
+      <DependentUpon>o_。。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0.Designer.cs">
+      <DependentUpon>o　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　0　　。O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0　　。O.Designer.cs">
+      <DependentUpon>o　0　　。O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　0。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0。.Designer.cs">
+      <DependentUpon>o　0。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　0。　　　.Designer.cs">
+      <DependentUpon>o　0。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　0。。O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　0。。O.Designer.cs">
+      <DependentUpon>O　0。。O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　O　.Designer.cs">
+      <DependentUpon>O　O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　o　。00。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　o　。00。　　.Designer.cs">
+      <DependentUpon>O　o　。00。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　O　。o。　　。。。0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　O　。o。　　。。。0.Designer.cs">
+      <DependentUpon>o　O　。o。　　。。。0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　O。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　O。　。　　　.Designer.cs">
+      <DependentUpon>O　O。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　_　.Designer.cs">
+      <DependentUpon>O　_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　_　。_。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　_　。_。　.Designer.cs">
+      <DependentUpon>o　_　。_。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　_　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　_　。。。　　.Designer.cs">
+      <DependentUpon>O　_　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　.Designer.2.cs">
+      <DependentUpon>O.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　.Designer.cs">
+      <DependentUpon>o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　o　　　　　oo。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　o　　　　　oo。。.Designer.cs">
+      <DependentUpon>O　　o　　　　　oo。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　_。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　_。.Designer.cs">
+      <DependentUpon>O　　　　_。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　　_。。。_。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　　_。。。_。.Designer.cs">
+      <DependentUpon>O　　　　　_。。。_。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　　　　　。　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　　　　　。　　。　。.Designer.cs">
+      <DependentUpon>o　　　　　　。　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　。。　　O。O。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　。。　　O。O。.Designer.cs">
+      <DependentUpon>O　　　　。。　　O。O。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。　　。O　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。　　。O　。。.Designer.cs">
+      <DependentUpon>O　　　。　　。O　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。　。。。。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。　。。。。　。.Designer.cs">
+      <DependentUpon>O　　　。　。。。。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。。。。_　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。。。。_　　。　.Designer.cs">
+      <DependentUpon>O　　　。。。。_　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。　　.Designer.cs">
+      <DependentUpon>o　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。　。。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。　。。　。.Designer.cs">
+      <DependentUpon>O　　。　。。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。　。。。0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。　。。。0.Designer.cs">
+      <DependentUpon>O　　。　。。。0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。.Designer.cs">
+      <DependentUpon>o　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。0。。　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。0。。　　。　。.Designer.cs">
+      <DependentUpon>o　　。。0。。　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。O.Designer.cs">
+      <DependentUpon>o　　。。O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。。　　　　　　.Designer.cs">
+      <DependentUpon>O　　。。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。。　。。O　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。。　。。O　。　.Designer.cs">
+      <DependentUpon>o　　。。。　。。O　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。。。o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。。。o.Designer.cs">
+      <DependentUpon>o　　。。。。o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。。。。。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。。。。。　。　.Designer.cs">
+      <DependentUpon>O　　。。。。。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。.3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。.4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。.Designer.2.cs">
+      <DependentUpon>o　。.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。.Designer.cs">
+      <DependentUpon>O　。.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。0　.Designer.cs">
+      <DependentUpon>o　。0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。O.Designer.cs">
+      <DependentUpon>O　。O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。o　。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。o　。。。。　.Designer.cs">
+      <DependentUpon>o　。o　。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。o。　。_。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。o。　。_。　　。.Designer.cs">
+      <DependentUpon>o　。o。　。_。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　.Designer.cs">
+      <DependentUpon>O　。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　o。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　o。　　　.Designer.cs">
+      <DependentUpon>O　。　o。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　o。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　o。。.Designer.cs">
+      <DependentUpon>O　。　o。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　　.Designer.cs">
+      <DependentUpon>O　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　　。.Designer.cs">
+      <DependentUpon>o　。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　。　.Designer.cs">
+      <DependentUpon>o　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　。　　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　。　　　。。.Designer.cs">
+      <DependentUpon>O　。　。　　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　。　。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　。　。.Designer.2.cs">
+      <DependentUpon>O　。　。　。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　。　。.Designer.cs">
+      <DependentUpon>o　。　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。.Designer.cs">
+      <DependentUpon>O　。。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。0。　__。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。0。　__。.Designer.cs">
+      <DependentUpon>O　。。0。　__。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。O　_。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。O　_。　　.Designer.cs">
+      <DependentUpon>O　。。O　_。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。O。　　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。O。　　　　。.Designer.cs">
+      <DependentUpon>o　。。O。　　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　0　.Designer.cs">
+      <DependentUpon>o　。。　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。　　.Designer.cs">
+      <DependentUpon>O　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　　　　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　　　　　　。.Designer.cs">
+      <DependentUpon>o　。。　　　　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　　。　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　　。　。　。.Designer.cs">
+      <DependentUpon>o　。。　　。　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　。。　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　。。　。。。.Designer.cs">
+      <DependentUpon>o　。。　。。　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。。_。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。。_。　　.Designer.cs">
+      <DependentUpon>O　。。。_。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。.Designer.cs">
+      <DependentUpon>o　。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。。。0。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。。。0。。.Designer.cs">
+      <DependentUpon>O　。。。。0。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。_　　。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。_　　。。。。.Designer.cs">
+      <DependentUpon>o　。。。。_　　。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。O　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。O　　　。　.Designer.cs">
+      <DependentUpon>o　。。。。。O　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。。　　.Designer.cs">
+      <DependentUpon>o　。。。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。。　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。。　　　。.Designer.cs">
+      <DependentUpon>o　。。。。。。　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。.3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0　　　　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0　　　　　。　。.Designer.cs">
+      <DependentUpon>O。0　　　　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。0　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0　。.Designer.cs">
+      <DependentUpon>O。0　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。0。O　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0。O　。。。　.Designer.cs">
+      <DependentUpon>O。0。O　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。0。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。0。　。　.Designer.cs">
+      <DependentUpon>o。0。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o.Designer.cs">
+      <DependentUpon>O。o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。o_。。。　。o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o_。。。　。o.Designer.cs">
+      <DependentUpon>O。o_。。。　。o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。o　。　　_。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o　。　　_。　。。.Designer.cs">
+      <DependentUpon>O。o　。　　_。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。o。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o。。　.Designer.cs">
+      <DependentUpon>O。o。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。o。。　。0。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。o。。　。0。　。。　.Designer.cs">
+      <DependentUpon>o。o。。　。0。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。_　　　.Designer.cs">
+      <DependentUpon>o。_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。_　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。_　。_。。。O.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。_　。_。。。O　.Designer.cs">
+      <DependentUpon>o。_　。_。。。O.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。_　。　　　　.Designer.cs">
+      <DependentUpon>O。_　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。_。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。_。　。.Designer.cs">
+      <DependentUpon>O。_。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　.Designer.2.cs">
+      <DependentUpon>o。.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　.Designer.cs">
+      <DependentUpon>O。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　0.Designer.cs">
+      <DependentUpon>O。　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　0_。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　0_。。。。.Designer.cs">
+      <DependentUpon>o。　0_。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　.Designer.cs">
+      <DependentUpon>O。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　0。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　0。　。.Designer.cs">
+      <DependentUpon>o。　　0。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　_　0　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　_　0　。　。　.Designer.cs">
+      <DependentUpon>O。　　_　0　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　0.Designer.cs">
+      <DependentUpon>o。　　　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　　O。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　　O。　。。　.Designer.cs">
+      <DependentUpon>O。　　　O。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　　　。　。.Designer.cs">
+      <DependentUpon>O。　　　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　。.Designer.cs">
+      <DependentUpon>o。　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　。。　　.Designer.cs">
+      <DependentUpon>o。　　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　　。。。。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　　。。。。。。。.Designer.cs">
+      <DependentUpon>O。　　　。。。。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。　o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。　o.Designer.cs">
+      <DependentUpon>O。　　。　o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　。　　　.Designer.cs">
+      <DependentUpon>o。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。　。.Designer.cs">
+      <DependentUpon>O。　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　。。。0。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　。。。0。.Designer.cs">
+      <DependentUpon>o。　　。。。0。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　。。。　。　0　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。。。　。　0　0.Designer.cs">
+      <DependentUpon>O。　　。。。　。　0　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。.3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。.4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。.Designer.2.cs">
+      <DependentUpon>o。　。.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。.Designer.cs">
+      <DependentUpon>O。　。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。_.Designer.cs">
+      <DependentUpon>o。　。_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。_。　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。_。　　。　。　.Designer.cs">
+      <DependentUpon>O。　。_。　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　.Designer.cs">
+      <DependentUpon>O。　。.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。　O。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　O。　。　.Designer.cs">
+      <DependentUpon>o。　。　O。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　　.Designer.cs">
+      <DependentUpon>O。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　　。_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　　。_.Designer.cs">
+      <DependentUpon>o。　。　　。_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　　。　　.Designer.cs">
+      <DependentUpon>O。　。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。　　。。。　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　　。。。　。。。.Designer.cs">
+      <DependentUpon>o。　。　　。。。　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。　。　　.Designer.cs">
+      <DependentUpon>O。　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。.Designer.cs">
+      <DependentUpon>O。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。O。oo。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。O。oo。。。.Designer.cs">
+      <DependentUpon>O。　。。O。oo。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。　.Designer.cs">
+      <DependentUpon>o。　。。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。　　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。。　　。　。　.Designer.cs">
+      <DependentUpon>o。　。。　　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。　。o。o。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。　。o。o。。.Designer.cs">
+      <DependentUpon>O。　。。　。o。o。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。。　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。。。　　。。　.Designer.cs">
+      <DependentUpon>o。　。。。　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。。。。。　。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。。。。。　。　。.Designer.cs">
+      <DependentUpon>O。　。。。。。。　。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。.5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。.Designer.2.cs">
+      <DependentUpon>o。。.5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.Designer.cs">
+      <DependentUpon>O。。.4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。o.Designer.cs">
+      <DependentUpon>O。。o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。O　。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。O　。　　。.Designer.cs">
+      <DependentUpon>O。。O　。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。_。。　O。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。_。。　O。　.Designer.cs">
+      <DependentUpon>O。。_。。　O。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　.Designer.2.cs">
+      <DependentUpon>O。。.6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　.Designer.cs">
+      <DependentUpon>o。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　0O　o　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　0O　o　　　。.Designer.cs">
+      <DependentUpon>o。。　0O　o　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　.Designer.cs">
+      <DependentUpon>O。。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　oo　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　　oo　。　.Designer.cs">
+      <DependentUpon>O。。　　oo　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　　　.Designer.cs">
+      <DependentUpon>O。。.3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　　。　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　　。　。。。.Designer.cs">
+      <DependentUpon>o。。　　　　。　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　　。。　.Designer.cs">
+      <DependentUpon>o。。　　　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　。　　　.Designer.cs">
+      <DependentUpon>o。。　　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　。.Designer.cs">
+      <DependentUpon>o。。　　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　。。　。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　　。。　。。。.Designer.cs">
+      <DependentUpon>O。。　　。。　。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　。　　。　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　。　　。　。。.Designer.cs">
+      <DependentUpon>o。。　。　　。　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　。。　　_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　。。　　_.Designer.cs">
+      <DependentUpon>O。。　。。　　_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。.Designer.cs">
+      <DependentUpon>O。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="o。。。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。。　。.Designer.cs">
+      <DependentUpon>o。。。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。　。。。。　0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。　。。。。　0.Designer.cs">
+      <DependentUpon>O。。。　。。。。　0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。.2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。_o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。_o　.Designer.cs">
+      <DependentUpon>O。。。。_o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　.Designer.cs">
+      <DependentUpon>O。。。。.2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　o　　.Designer.cs">
+      <DependentUpon>O。。。。　o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　　.Designer.cs">
+      <DependentUpon>O。。。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　　O。。。o.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　　O。。。o　.Designer.cs">
+      <DependentUpon>O。。。。　　O。。。o.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　　。。　　。。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　　。。　　。。.Designer.cs">
+      <DependentUpon>O。。。。　　。。　　。。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。。　。.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。。　。.Designer.cs">
+      <DependentUpon>O。。。。。　。.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageFooterEventArgs.cs" />
+    <Compile Include="PageHeaderEventArgs.cs" />
+    <Compile Include="PainterProperty.cs" />
+    <Compile Include="PanelProperty.cs" />
+    <Compile Include="ParentChildPair.cs" />
+    <Compile Include="ParsingEventArgs.cs" />
+    <Compile Include="PDFCreator.cs" />
+    <Compile Include="PDFSource.cs" />
+    <Compile Include="PDFViewerProperty.cs" />
+    <Compile Include="PictureBoxProperty.cs" />
+    <Compile Include="PictureViewer.cs" />
+    <Compile Include="PictureViewerProperty.cs" />
+    <Compile Include="Port.cs" />
+    <Compile Include="PriceTable.cs" />
+    <Compile Include="PrintDoc.cs" />
+    <Compile Include="PrintInfo.cs" />
+    <Compile Include="PrintPageProperty.cs" />
+    <Compile Include="Process.cs" />
+    <Compile Include="ProgressBarProperty.cs" />
+    <Compile Include="ProjectConfig.cs" />
+    <Compile Include="ProjectProperty.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyBase.cs" />
+    <Compile Include="PY.cs" />
+    <Compile Include="PYJS.cs" />
+    <Compile Include="QueryBuilder.cs" />
+    <Compile Include="RadioButtonProperty.cs" />
+    <Compile Include="ReceivedCallEventArgs.cs" />
+    <Compile Include="RecordGridProperty.cs" />
+    <Compile Include="Relation.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="ReportCollection.cs" />
+    <Compile Include="ReportProperty.cs" />
+    <Compile Include="RequestEventArgs.cs" />
+    <Compile Include="Ribbon.cs" />
+    <Compile Include="RibbonApplicationMenu.cs" />
+    <Compile Include="RibbonBase.cs" />
+    <Compile Include="RibbonBottomToolBar.cs" />
+    <Compile Include="RibbonButton.cs" />
+    <Compile Include="RibbonButtonEventArgs.cs" />
+    <Compile Include="RibbonCheckBox.cs" />
+    <Compile Include="RibbonCheckBoxEventArgs.cs" />
+    <Compile Include="RibbonCodeReportList.cs" />
+    <Compile Include="RibbonColorPicker.cs" />
+    <Compile Include="RibbonColorPickerEventArgs.cs" />
+    <Compile Include="RibbonComboBox.cs" />
+    <Compile Include="RibbonComboBoxEventArgs.cs" />
+    <Compile Include="RibbonConfigToolBar.cs" />
+    <Compile Include="RibbonCrossTableList.cs" />
+    <Compile Include="RibbonDatePicker.cs" />
+    <Compile Include="RibbonDatePickerEventArgs.cs" />
+    <Compile Include="RibbonDropDownItem.cs" />
+    <Compile Include="RibbonEventArgs.cs" />
+    <Compile Include="RibbonExcelReportList.cs" />
+    <Compile Include="RibbonFontComboBox.cs" />
+    <Compile Include="RibbonFontComboBoxEventArgs.cs" />
+    <Compile Include="RibbonGallery.cs" />
+    <Compile Include="RibbonGalleryEventArgs.cs" />
+    <Compile Include="RibbonGalleryItem.cs" />
+    <Compile Include="RibbonGroup.cs" />
+    <Compile Include="RibbonGroupEventArgs.cs" />
+    <Compile Include="RibbonGroupTableList.cs" />
+    <Compile Include="RibbonItem.cs" />
+    <Compile Include="RibbonItemCollectionEditor.cs" />
+    <Compile Include="RibbonItemContainer.cs" />
+    <Compile Include="RibbonItemTypeEnum.cs" />
+    <Compile Include="RibbonLabel.cs" />
+    <Compile Include="RibbonLabelEventArgs.cs" />
+    <Compile Include="RibbonMenuButton.cs" />
+    <Compile Include="RibbonMenuButtonEventArgs.cs" />
+    <Compile Include="RibbonMenuJs.cs" />
+    <Compile Include="RibbonMenu\ApplicationMenu.cs" />
+    <Compile Include="RibbonMenu\BottomToolBar.cs" />
+    <Compile Include="RibbonMenu\Button.cs" />
+    <Compile Include="RibbonMenu\CheckBox.cs" />
+    <Compile Include="RibbonMenu\ColorPicker.cs" />
+    <Compile Include="RibbonMenu\ComboBox.cs" />
+    <Compile Include="RibbonMenu\ConfigBar.cs" />
+    <Compile Include="RibbonMenu\ContextCommand.cs" />
+    <Compile Include="RibbonMenu\ContextCommandCollection.cs" />
+    <Compile Include="RibbonMenu\ContextCommandEnumerator.cs" />
+    <Compile Include="RibbonMenu\ContextCommandMenu.cs" />
+    <Compile Include="RibbonMenu\ContextMenu.cs" />
+    <Compile Include="RibbonMenu\ContextMenuCollection.cs" />
+    <Compile Include="RibbonMenu\ContextMenuEnumerator.cs" />
+    <Compile Include="RibbonMenu\DatePicker.cs" />
+    <Compile Include="RibbonMenu\EditBox.cs" />
+    <Compile Include="RibbonMenu\FontComboBox.cs" />
+    <Compile Include="RibbonMenu\Gallery.cs" />
+    <Compile Include="RibbonMenu\GalleryItem.cs" />
+    <Compile Include="RibbonMenu\GalleryItemCollection.cs" />
+    <Compile Include="RibbonMenu\GalleryItemEnumerator.cs" />
+    <Compile Include="RibbonMenu\Group.cs" />
+    <Compile Include="RibbonMenu\Label.cs" />
+    <Compile Include="RibbonMenu\MenuButton.cs" />
+    <Compile Include="RibbonMenu\NumericBox.cs" />
+    <Compile Include="RibbonMenu\ProgressBar.cs" />
+    <Compile Include="RibbonMenu\Qat.cs" />
+    <Compile Include="RibbonMenu\RibbonGroupCollection.cs" />
+    <Compile Include="RibbonMenu\RibbonGroupEnumerator.cs" />
+    <Compile Include="RibbonMenu\RibbonItem.cs" />
+    <Compile Include="RibbonMenu\RibbonItemCollection.cs" />
+    <Compile Include="RibbonMenu\RibbonItemEnumerator.cs" />
+    <Compile Include="RibbonMenu\RibbonTabCollection.cs" />
+    <Compile Include="RibbonMenu\RibbonTabEnumerator.cs" />
+    <Compile Include="RibbonMenu\RibbonTabGroupCollection.cs" />
+    <Compile Include="RibbonMenu\RibbonTabGroupEnumerator.cs" />
+    <Compile Include="RibbonMenu\Separator.cs" />
+    <Compile Include="RibbonMenu\SplitButton.cs" />
+    <Compile Include="RibbonMenu\StatusBar.cs" />
+    <Compile Include="RibbonMenu\Tab.cs" />
+    <Compile Include="RibbonMenu\TabGroup.cs" />
+    <Compile Include="RibbonMenu\TextBox.cs" />
+    <Compile Include="RibbonMenu\TimePicker.cs" />
+    <Compile Include="RibbonMenu\ToggleButton.cs" />
+    <Compile Include="RibbonMenu\ToggleGroup.cs" />
+    <Compile Include="RibbonMenu\ToolBar.cs" />
+    <Compile Include="RibbonMenu\TopToolBar.cs" />
+    <Compile Include="RibbonMenu\TrackBar.cs" />
+    <Compile Include="RibbonNumericBox.cs" />
+    <Compile Include="RibbonNumericBoxEventArgs.cs" />
+    <Compile Include="RibbonPaneEnum.cs" />
+    <Compile Include="RibbonPaperList.cs" />
+    <Compile Include="RibbonProgressBar.cs" />
+    <Compile Include="RibbonProgressBarEventArgs.cs" />
+    <Compile Include="RibbonQat.cs" />
+    <Compile Include="RibbonSeparator.cs" />
+    <Compile Include="RibbonSeparatorEventArgs.cs" />
+    <Compile Include="RibbonSplitButton.cs" />
+    <Compile Include="RibbonSplitButtonEventArgs.cs" />
+    <Compile Include="RibbonSubtotalModeList.cs" />
+    <Compile Include="RibbonTab.cs" />
+    <Compile Include="RibbonTabCollection.cs" />
+    <Compile Include="RibbonTabEventArgs.cs" />
+    <Compile Include="RibbonTableViewList.cs" />
+    <Compile Include="RibbonTextBox.cs" />
+    <Compile Include="RibbonTextBoxEventArgs.cs" />
+    <Compile Include="RibbonTimePicker.cs" />
+    <Compile Include="RibbonTimePickerEventArgs.cs" />
+    <Compile Include="RibbonToggleButton.cs" />
+    <Compile Include="RibbonToggleButtonEventArgs.cs" />
+    <Compile Include="RibbonToggleGroup.cs" />
+    <Compile Include="RibbonToggleGroupEventArgs.cs" />
+    <Compile Include="RibbonToolBar.cs" />
+    <Compile Include="RibbonToolBarEventArgs.cs" />
+    <Compile Include="RibbonTopTab.cs" />
+    <Compile Include="RibbonTopTabCollection.cs" />
+    <Compile Include="RibbonTopToolBar.cs" />
+    <Compile Include="RibbonTrackBar.cs" />
+    <Compile Include="RibbonTrackBarEventArgs.cs" />
+    <Compile Include="RibbonWindowList.cs" />
+    <Compile Include="RibbonWordReportList.cs" />
+    <Compile Include="Row.cs" />
+    <Compile Include="RowColEventArgs.cs" />
+    <Compile Include="RowCollection.cs" />
+    <Compile Include="RowColPositionEventArgs.cs" />
+    <Compile Include="SaveFileDialogA.cs" />
+    <Compile Include="SaveFileDialogForjs.cs" />
+    <Compile Include="ScriptDialogOpeningEventArgs.cs" />
+    <Compile Include="SendkeysJs.cs" />
+    <Compile Include="SendTypeEnum.cs" />
+    <Compile Include="SentMsgStatusEventArgs.cs" />
+    <Compile Include="Server_ChangeUserPasswordEventArgs.cs" />
+    <Compile Include="Server_MessageEventargs.cs" />
+    <Compile Include="Server_UserEventArgs.cs" />
+    <Compile Include="Server_UserLoggingEventArgs.cs" />
+    <Compile Include="Server_UserLogoutEventArgs.cs" />
+    <Compile Include="SetupEditorEventArgs.cs" />
+    <Compile Include="ShowErrorMessageEventArgs.cs" />
+    <Compile Include="SimpleNodeProperty.cs" />
+    <Compile Include="SortEventArgs.cs" />
+    <Compile Include="SourceChangedEventArgs.cs" />
+    <Compile Include="SplitContainerProperty.cs" />
+    <Compile Include="SQLCommand.cs" />
+    <Compile Include="SQLCrossTableBuilder.cs" />
+    <Compile Include="SQLGroupTableBuilder.cs" />
+    <Compile Include="SQLJoinTableBuilder.cs" />
+    <Compile Include="StatusBar.cs" />
+    <Compile Include="StockTable.cs" />
+    <Compile Include="StripCollection.cs" />
+    <Compile Include="StripItemCollection.cs" />
+    <Compile Include="StripItemEventArgs.cs" />
+    <Compile Include="StripItemTypeEnum.cs" />
+    <Compile Include="StripItemTypeEnum2.cs" />
+    <Compile Include="StripTypeEnum.cs" />
+    <Compile Include="StripTypeEnum2.cs" />
+    <Compile Include="StructureCompareResult.cs" />
+    <Compile Include="SubtotalGroup.cs" />
+    <Compile Include="SubtotalGroupCollection.cs" />
+    <Compile Include="SubtotalModeProperty.cs" />
+    <Compile Include="Syscmd\Column.cs" />
+    <Compile Include="Syscmd\Edit.cs" />
+    <Compile Include="Syscmd\Filter.cs" />
+    <Compile Include="Syscmd\GridTree.cs" />
+    <Compile Include="Syscmd\Project.cs" />
+    <Compile Include="Syscmd\Row.cs" />
+    <Compile Include="Syscmd\Sort.cs" />
+    <Compile Include="Syscmd\Table.cs" />
+    <Compile Include="TabControlProperty.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableCollection.cs" />
+    <Compile Include="TableDataMap.cs" />
+    <Compile Include="TableEventArgs.cs" />
+    <Compile Include="TableGridProperty.cs" />
+    <Compile Include="TableProperty.cs" />
+    <Compile Include="TableViewProperty.cs" />
+    <Compile Include="TabPageChangingEventArgs.cs" />
+    <Compile Include="TabPageCollection.cs" />
+    <Compile Include="TempBindingTable.cs" />
+    <Compile Include="tempDataTableCollection.cs" />
+    <Compile Include="TextBoxProperty.cs" />
+    <Compile Include="TextImageRelationEnum.cs" />
+    <Compile Include="TextPositionEnum.cs" />
+    <Compile Include="TileSoureEnum.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="TimerCollection.cs" />
+    <Compile Include="TimerProperty.cs" />
+    <Compile Include="TimeSpanBoxProperty.cs" />
+    <Compile Include="TopicBarProperty.cs" />
+    <Compile Include="TopicLinkCollection.cs" />
+    <Compile Include="TopicLinkEventArgs.cs" />
+    <Compile Include="TopicLinkProperty.cs" />
+    <Compile Include="TopicPageCollection.cs" />
+    <Compile Include="TopicPageEventArgs.cs" />
+    <Compile Include="TopicPageProperty.cs" />
+    <Compile Include="TotalCollection.cs" />
+    <Compile Include="TotalOn.cs" />
+    <Compile Include="TrackBarProperty.cs" />
+    <Compile Include="TreeNodeEditEventArgs.cs" />
+    <Compile Include="TreeTypeEnum.cs" />
+    <Compile Include="TreeViewEventArgs.cs" />
+    <Compile Include="TreeViewProperty.cs" />
+    <Compile Include="UDPClient.cs" />
+    <Compile Include="UDPClient_MessageReceived.cs" />
+    <Compile Include="UKey.cs" />
+    <Compile Include="UpdateRowEventArgs.cs" />
+    <Compile Include="UpDownButtonClickEventArgs.cs" />
+    <Compile Include="UserFunctions.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="UserInfos.cs" />
+    <Compile Include="UserProperty.cs" />
+    <Compile Include="ValidateEditEventArgs.cs" />
+    <Compile Include="VarsCollection.cs" />
+    <Compile Include="VectorRecord.cs" />
+    <Compile Include="VirtualLayer.cs" />
+    <Compile Include="VirtualTileSource.cs" />
+    <Compile Include="VisualStyleEnum.cs" />
+    <Compile Include="wActionMenu.cs" />
+    <Compile Include="wActionSheet.cs" />
+    <Compile Include="wArticle.cs" />
+    <Compile Include="wButton.cs" />
+    <Compile Include="wButtonGroup.cs" />
+    <Compile Include="wCheck.cs" />
+    <Compile Include="wCheckGroup.cs" />
+    <Compile Include="wDataList.cs" />
+    <Compile Include="wDialog.cs" />
+    <Compile Include="WebBrowserProperty.cs" />
+    <Compile Include="WebMessageReceivedEventArgs.cs" />
+    <Compile Include="WebResourceRequestedEventArgs.cs" />
+    <Compile Include="WebResourceResponseReceivedEventArgs.cs" />
+    <Compile Include="WebViewer.cs" />
+    <Compile Include="WebViewerProperty.cs" />
+    <Compile Include="WeChatMessageReceived.cs" />
+    <Compile Include="wElement.cs" />
+    <Compile Include="weMessageReceived.cs" />
+    <Compile Include="wForm.cs" />
+    <Compile Include="wGallery.cs" />
+    <Compile Include="wGrid.cs" />
+    <Compile Include="wGridCell.cs" />
+    <Compile Include="wGroupTitle.cs" />
+    <Compile Include="wImage.cs" />
+    <Compile Include="WinForm\BarCode.cs" />
+    <Compile Include="WinForm\BarCodeBuilder.cs" />
+    <Compile Include="WinForm\Button.cs" />
+    <Compile Include="WinForm\Calendar.cs" />
+    <Compile Include="WinForm\Chart.cs" />
+    <Compile Include="WinForm\ChartAxis.cs" />
+    <Compile Include="WinForm\ChartDataArray.cs" />
+    <Compile Include="WinForm\ChartSerialCollection.cs" />
+    <Compile Include="WinForm\ChartSeries.cs" />
+    <Compile Include="WinForm\CheckBox.cs" />
+    <Compile Include="WinForm\CheckedComboBox.cs" />
+    <Compile Include="WinForm\CheckedListBox.cs" />
+    <Compile Include="WinForm\ColorLabel.cs" />
+    <Compile Include="WinForm\ColorPicker.cs" />
+    <Compile Include="WinForm\ComboBox.cs" />
+    <Compile Include="WinForm\Control.cs" />
+    <Compile Include="WinForm\DateTimePicker.cs" />
+    <Compile Include="WinForm\DropDownBox.cs" />
+    <Compile Include="WinForm\FileManager.cs" />
+    <Compile Include="WinForm\FilterTree.cs" />
+    <Compile Include="WinForm\FontPicker.cs" />
+    <Compile Include="WinForm\Form.cs" />
+    <Compile Include="WinForm\GanttView.cs" />
+    <Compile Include="WinForm\Gauges.cs" />
+    <Compile Include="WinForm\GroupBox.cs" />
+    <Compile Include="WinForm\InlineTree.cs" />
+    <Compile Include="WinForm\Label.cs" />
+    <Compile Include="WinForm\LayersTree.cs" />
+    <Compile Include="WinForm\Line.cs" />
+    <Compile Include="WinForm\ListBox.cs" />
+    <Compile Include="WinForm\ListView.cs" />
+    <Compile Include="WinForm\ListViewCell.cs" />
+    <Compile Include="WinForm\ListViewColumn.cs" />
+    <Compile Include="WinForm\ListViewGroup.cs" />
+    <Compile Include="WinForm\ListViewRow.cs" />
+    <Compile Include="WinForm\LoadTree.cs" />
+    <Compile Include="WinForm\Map.cs" />
+    <Compile Include="WinForm\NavBar.cs" />
+    <Compile Include="WinForm\NavPage.cs" />
+    <Compile Include="WinForm\NumericComboBox.cs" />
+    <Compile Include="WinForm\Painter.cs" />
+    <Compile Include="WinForm\Panel.cs" />
+    <Compile Include="WinForm\PDFViewer.cs" />
+    <Compile Include="WinForm\PictureBox.cs" />
+    <Compile Include="WinForm\PictureViewer.cs" />
+    <Compile Include="WinForm\ProgressBar.cs" />
+    <Compile Include="WinForm\RadioButton.cs" />
+    <Compile Include="WinForm\RecordGrid.cs" />
+    <Compile Include="WinForm\SplitContainer.cs" />
+    <Compile Include="WinForm\SplitPanel.cs" />
+    <Compile Include="WinForm\Strip.cs" />
+    <Compile Include="WinForm\StripItem.cs" />
+    <Compile Include="WinForm\TabControl.cs" />
+    <Compile Include="WinForm\Table.cs" />
+    <Compile Include="WinForm\TabPage.cs" />
+    <Compile Include="WinForm\TextBox.cs" />
+    <Compile Include="WinForm\TimeSpanBox.cs" />
+    <Compile Include="WinForm\TopicBar.cs" />
+    <Compile Include="WinForm\TopicLink.cs" />
+    <Compile Include="WinForm\TopicPage.cs" />
+    <Compile Include="WinForm\TrackBar.cs" />
+    <Compile Include="WinForm\TreeNode.cs" />
+    <Compile Include="WinForm\TreeNodes.cs" />
+    <Compile Include="WinForm\TreeView.cs" />
+    <Compile Include="WinForm\WebBrowser.cs" />
+    <Compile Include="WinForm\WebViewer.cs" />
+    <Compile Include="wInput.cs" />
+    <Compile Include="wInputCell.cs" />
+    <Compile Include="wInputGroup.cs" />
+    <Compile Include="wLabel.cs" />
+    <Compile Include="wListGroup.cs" />
+    <Compile Include="wListIem.cs" />
+    <Compile Include="wMsgPage.cs" />
+    <Compile Include="WordCreator.cs" />
+    <Compile Include="WordReport.cs" />
+    <Compile Include="Word\Report.cs" />
+    <Compile Include="Word\ReportCollection.cs" />
+    <Compile Include="Word\ReportProperty.cs" />
+    <Compile Include="Word\WordFunctions.cs" />
+    <Compile Include="wPage.cs" />
+    <Compile Include="wPageFooter.cs" />
+    <Compile Include="wPageTitle.cs" />
+    <Compile Include="wPanel.cs" />
+    <Compile Include="wPanelGroup.cs" />
+    <Compile Include="wPreview.cs" />
+    <Compile Include="wProgress.cs" />
+    <Compile Include="wRadioGroup.cs" />
+    <Compile Include="wRadion.cs" />
+    <Compile Include="wRawHtml.cs" />
+    <Compile Include="wRowCollection.cs" />
+    <Compile Include="WsConnectResult.cs" />
+    <Compile Include="wSelect.cs" />
+    <Compile Include="wSwitch.cs" />
+    <Compile Include="wTabbar.cs" />
+    <Compile Include="wTabButton.cs" />
+    <Compile Include="wTable.cs" />
+    <Compile Include="wTableRow.cs" />
+    <Compile Include="wTextArea.cs" />
+    <Compile Include="wToast.cs" />
+    <Compile Include="wToptips.cs" />
+    <Compile Include="wui.cs" />
+    <Compile Include="wUploader.cs" />
+    <Compile Include="wVcodeButton.cs" />
+    <Compile Include="WXBizCrypt.cs" />
+    <Compile Include="XLS\a.cs" />
+    <Compile Include="XLS\AlignHorzEnum.cs" />
+    <Compile Include="XLS\AlignVertEnum.cs" />
+    <Compile Include="XLS\b.cs" />
+    <Compile Include="XLS\Book.cs" />
+    <Compile Include="XLS\c.cs" />
+    <Compile Include="XLS\Cell.cs" />
+    <Compile Include="XLS\Col.cs" />
+    <Compile Include="XLS\ColColection.cs" />
+    <Compile Include="XLS\DiagonalEnum.cs" />
+    <Compile Include="XLS\LineStyleEnum.cs" />
+    <Compile Include="XLS\Picture.cs" />
+    <Compile Include="XLS\PrintSetting.cs" />
+    <Compile Include="XLS\Report.cs" />
+    <Compile Include="XLS\ReportCollection.cs" />
+    <Compile Include="XLS\ReportProperty.cs" />
+    <Compile Include="XLS\Row.cs" />
+    <Compile Include="XLS\RowCollection.cs" />
+    <Compile Include="XLS\Sheet.cs" />
+    <Compile Include="XLS\SheetCollection.cs" />
+    <Compile Include="XLS\Style.cs" />
+    <Compile Include="XLS\XLSFunctions.cs" />
+    <Compile Include="XObject.cs" />
+    <Compile Include="YieldTable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="af.resources" />
+    <EmbeddedResource Include="C1\Win\C1GanttView\4.resources" />
+    <EmbeddedResource Include="ControlHolder.resources" />
+    <EmbeddedResource Include="d0.resources" />
+    <EmbeddedResource Include="di.resources" />
+    <EmbeddedResource Include="du.resources" />
+    <EmbeddedResource Include="ef.resources" />
+    <EmbeddedResource Include="ev.resources" />
+    <EmbeddedResource Include="exe.licenses" />
+    <EmbeddedResource Include="f4.resources" />
+    <EmbeddedResource Include="FileManager.resources" />
+    <EmbeddedResource Include="FormPanel.resources" />
+    <EmbeddedResource Include="g1.resources" />
+    <EmbeddedResource Include="g2.resources" />
+    <EmbeddedResource Include="gg.resources" />
+    <EmbeddedResource Include="gv.resources" />
+    <EmbeddedResource Include="h0.resources" />
+    <EmbeddedResource Include="j8.resources" />
+    <EmbeddedResource Include="jk.resources" />
+    <EmbeddedResource Include="jr.resources" />
+    <EmbeddedResource Include="k2.resources" />
+    <EmbeddedResource Include="ky.resources" />
+    <EmbeddedResource Include="lz.resources" />
+    <EmbeddedResource Include="mf.resources" />
+    <EmbeddedResource Include="O.2.resources" />
+    <EmbeddedResource Include="o.resources" />
+    <EmbeddedResource Include="O00_Oooo0oo00.resources" />
+    <EmbeddedResource Include="O0O__.resources" />
+    <EmbeddedResource Include="o0o。.resources" />
+    <EmbeddedResource Include="O0___o0_.resources" />
+    <EmbeddedResource Include="o0　　　　。。.resources" />
+    <EmbeddedResource Include="o0。.resources" />
+    <EmbeddedResource Include="OO.resources" />
+    <EmbeddedResource Include="oO0.resources" />
+    <EmbeddedResource Include="oo0O0oO_OOOo.resources" />
+    <EmbeddedResource Include="Oo0O__.resources" />
+    <EmbeddedResource Include="oo0_o0o_0o__.resources" />
+    <EmbeddedResource Include="oO0。.resources" />
+    <EmbeddedResource Include="oOo0o0__0.resources" />
+    <EmbeddedResource Include="oOOO0oo0_oO_o.resources" />
+    <EmbeddedResource Include="oOOoo_0_0o_.resources" />
+    <EmbeddedResource Include="oOOOO_Oo_.resources" />
+    <EmbeddedResource Include="OOo_o.resources" />
+    <EmbeddedResource Include="oOo__OO_.resources" />
+    <EmbeddedResource Include="OO___O_.resources" />
+    <EmbeddedResource Include="oo　　0。　o。.resources" />
+    <EmbeddedResource Include="oo　　　。.resources" />
+    <EmbeddedResource Include="Oo　　。　。。.resources" />
+    <EmbeddedResource Include="oo　。_　　　。.resources" />
+    <EmbeddedResource Include="oO　。。　O.resources" />
+    <EmbeddedResource Include="oo。　。　。.resources" />
+    <EmbeddedResource Include="o_.2.resources" />
+    <EmbeddedResource Include="O_.3.resources" />
+    <EmbeddedResource Include="O_.resources" />
+    <EmbeddedResource Include="o_0.resources" />
+    <EmbeddedResource Include="O_O_OO.resources" />
+    <EmbeddedResource Include="O_　0_。O。。.resources" />
+    <EmbeddedResource Include="O_。　。.resources" />
+    <EmbeddedResource Include="o_。。　　。.resources" />
+    <EmbeddedResource Include="o　0.resources" />
+    <EmbeddedResource Include="o　0　　。O.resources" />
+    <EmbeddedResource Include="o　0。.2.resources" />
+    <EmbeddedResource Include="o　0。.resources" />
+    <EmbeddedResource Include="O　0。。O.resources" />
+    <EmbeddedResource Include="O　O.resources" />
+    <EmbeddedResource Include="O　o　。00。.resources" />
+    <EmbeddedResource Include="o　O　。o。　　。。。0.resources" />
+    <EmbeddedResource Include="O　O。　。.resources" />
+    <EmbeddedResource Include="O　_.resources" />
+    <EmbeddedResource Include="o　_　。_。.resources" />
+    <EmbeddedResource Include="O　_　。。。.resources" />
+    <EmbeddedResource Include="O　　o　　　　　oo。。.resources" />
+    <EmbeddedResource Include="O　　　　_。.resources" />
+    <EmbeddedResource Include="O　　　　　_。。。_。.resources" />
+    <EmbeddedResource Include="o　　　　　　。　　。　。.resources" />
+    <EmbeddedResource Include="O　　　　。。　　O。O。.resources" />
+    <EmbeddedResource Include="O　　　。　　。O　。。.resources" />
+    <EmbeddedResource Include="O　　　。　。。。。　。.resources" />
+    <EmbeddedResource Include="O　　　。。。。_　　。.resources" />
+    <EmbeddedResource Include="o　　。.resources" />
+    <EmbeddedResource Include="O　　。　。。　。.resources" />
+    <EmbeddedResource Include="O　　。　。。。0.resources" />
+    <EmbeddedResource Include="O　　。。.2.resources" />
+    <EmbeddedResource Include="o　　。。.resources" />
+    <EmbeddedResource Include="o　　。。0。。　　。　。.resources" />
+    <EmbeddedResource Include="o　　。。O.resources" />
+    <EmbeddedResource Include="o　　。。。　。。O　。.resources" />
+    <EmbeddedResource Include="o　　。。。。o.resources" />
+    <EmbeddedResource Include="O　　。。。。。　。.resources" />
+    <EmbeddedResource Include="O　。.2.resources" />
+    <EmbeddedResource Include="O　。.3.resources" />
+    <EmbeddedResource Include="o　。.4.resources" />
+    <EmbeddedResource Include="O　。.resources" />
+    <EmbeddedResource Include="o　。0.resources" />
+    <EmbeddedResource Include="O　。O.resources" />
+    <EmbeddedResource Include="o　。o　。。。。.resources" />
+    <EmbeddedResource Include="o　。o。　。_。　　。.resources" />
+    <EmbeddedResource Include="O　。　o。.resources" />
+    <EmbeddedResource Include="O　。　o。。.resources" />
+    <EmbeddedResource Include="o　。　　。.resources" />
+    <EmbeddedResource Include="o　。　。.resources" />
+    <EmbeddedResource Include="O　。　。　　　。。.resources" />
+    <EmbeddedResource Include="O　。　。　。.2.resources" />
+    <EmbeddedResource Include="o　。　。　。.resources" />
+    <EmbeddedResource Include="O　。。.2.resources" />
+    <EmbeddedResource Include="O　。。.resources" />
+    <EmbeddedResource Include="O　。。0。　__。.resources" />
+    <EmbeddedResource Include="O　。。O　_。.resources" />
+    <EmbeddedResource Include="o　。。O。　　　　。.resources" />
+    <EmbeddedResource Include="o　。。　0.resources" />
+    <EmbeddedResource Include="o　。。　　　　　　。.resources" />
+    <EmbeddedResource Include="o　。。　　。　。　。.resources" />
+    <EmbeddedResource Include="o　。。　。。　。。。.resources" />
+    <EmbeddedResource Include="o　。。。。.resources" />
+    <EmbeddedResource Include="O　。。。。0。。.resources" />
+    <EmbeddedResource Include="o　。。。。_　　。。。。.resources" />
+    <EmbeddedResource Include="o　。。。。。O　　　。.resources" />
+    <EmbeddedResource Include="o　。。。。。。.resources" />
+    <EmbeddedResource Include="o　。。。。。。　　　。.resources" />
+    <EmbeddedResource Include="O。.2.resources" />
+    <EmbeddedResource Include="o。.3.resources" />
+    <EmbeddedResource Include="O。.resources" />
+    <EmbeddedResource Include="O。0　　　　　。　。.resources" />
+    <EmbeddedResource Include="O。0　。.resources" />
+    <EmbeddedResource Include="O。0。O　。。。.resources" />
+    <EmbeddedResource Include="o。0。　。.resources" />
+    <EmbeddedResource Include="O。o.resources" />
+    <EmbeddedResource Include="O。o_。。。　。o.resources" />
+    <EmbeddedResource Include="O。o　。　　_。　。。.resources" />
+    <EmbeddedResource Include="O。o。。.resources" />
+    <EmbeddedResource Include="o。o。。　。0。　。。.resources" />
+    <EmbeddedResource Include="o。_.resources" />
+    <EmbeddedResource Include="O。_　。.resources" />
+    <EmbeddedResource Include="o。_　。_。。。O.resources" />
+    <EmbeddedResource Include="O。_。　。.resources" />
+    <EmbeddedResource Include="O。　0.resources" />
+    <EmbeddedResource Include="o。　0_。。。。.resources" />
+    <EmbeddedResource Include="o。　　0。　。.resources" />
+    <EmbeddedResource Include="O。　　_　0　。　。.resources" />
+    <EmbeddedResource Include="o。　　　0.resources" />
+    <EmbeddedResource Include="O。　　　O。　。。.resources" />
+    <EmbeddedResource Include="O。　　　　。　。.resources" />
+    <EmbeddedResource Include="o。　　　。.resources" />
+    <EmbeddedResource Include="o。　　　。。.resources" />
+    <EmbeddedResource Include="O。　　　。。。。。。。.resources" />
+    <EmbeddedResource Include="o。　　。.resources" />
+    <EmbeddedResource Include="O。　　。　o.resources" />
+    <EmbeddedResource Include="O。　　。　。.resources" />
+    <EmbeddedResource Include="o。　　。。。0。.resources" />
+    <EmbeddedResource Include="O。　　。。。　。　0　0.resources" />
+    <EmbeddedResource Include="O。　。.2.resources" />
+    <EmbeddedResource Include="O。　。.3.resources" />
+    <EmbeddedResource Include="o。　。.4.resources" />
+    <EmbeddedResource Include="O。　。.resources" />
+    <EmbeddedResource Include="o。　。_.resources" />
+    <EmbeddedResource Include="O。　。_。　　。　。.resources" />
+    <EmbeddedResource Include="o。　。　O。　。.resources" />
+    <EmbeddedResource Include="O。　。　　。.resources" />
+    <EmbeddedResource Include="o。　。　　。_.resources" />
+    <EmbeddedResource Include="o。　。　　。。。　。。。.resources" />
+    <EmbeddedResource Include="O。　。　。.resources" />
+    <EmbeddedResource Include="o。　。。.2.resources" />
+    <EmbeddedResource Include="O。　。。.resources" />
+    <EmbeddedResource Include="O。　。。O。oo。。。.resources" />
+    <EmbeddedResource Include="o。　。。　　。　。.resources" />
+    <EmbeddedResource Include="O。　。。　。o。o。。.resources" />
+    <EmbeddedResource Include="o。　。。。　　。。.resources" />
+    <EmbeddedResource Include="O。　。。。。。。　。　。.resources" />
+    <EmbeddedResource Include="O。。.2.resources" />
+    <EmbeddedResource Include="O。。.3.resources" />
+    <EmbeddedResource Include="O。。.4.resources" />
+    <EmbeddedResource Include="o。。.5.resources" />
+    <EmbeddedResource Include="O。。.6.resources" />
+    <EmbeddedResource Include="o。。.resources" />
+    <EmbeddedResource Include="O。。o.resources" />
+    <EmbeddedResource Include="O。。O　。　　。.resources" />
+    <EmbeddedResource Include="O。。_。。　O。.resources" />
+    <EmbeddedResource Include="o。。　0O　o　　　。.resources" />
+    <EmbeddedResource Include="O。。　　oo　。.resources" />
+    <EmbeddedResource Include="o。。　　　　。　。。。.resources" />
+    <EmbeddedResource Include="o。。　　　　。。.resources" />
+    <EmbeddedResource Include="o。。　　　。.resources" />
+    <EmbeddedResource Include="o。。　　。.resources" />
+    <EmbeddedResource Include="O。。　　。。　。。。.resources" />
+    <EmbeddedResource Include="o。。　。　　。　。。.resources" />
+    <EmbeddedResource Include="O。。　。。　　_.resources" />
+    <EmbeddedResource Include="O。。。.resources" />
+    <EmbeddedResource Include="o。。。　。.resources" />
+    <EmbeddedResource Include="O。。。　。。。。　0.resources" />
+    <EmbeddedResource Include="O。。。。.2.resources" />
+    <EmbeddedResource Include="O。。。。.resources" />
+    <EmbeddedResource Include="O。。。。_o.resources" />
+    <EmbeddedResource Include="O。。。。　o.resources" />
+    <EmbeddedResource Include="O。。。。　　O。。。o.resources" />
+    <EmbeddedResource Include="O。。。。　　。。　　。。.resources" />
+    <EmbeddedResource Include="O。。。。。　。.resources" />
+    <EmbeddedResource Include="PictureViewer.resources" />
+    <EmbeddedResource Include="Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="app.manifest" />
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
